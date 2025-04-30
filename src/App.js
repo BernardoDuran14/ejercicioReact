@@ -33,7 +33,7 @@ class App extends Component {
     const empleadosFiltrados = this.state.empleados.filter((empleado) => {
       if (this.state.filtro === "activos") return empleado.activo;
       if (this.state.filtro === "inactivos") return !empleado.activo;
-      return;
+      return true;
     });
     return (
       <div className="container">
